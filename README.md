@@ -18,10 +18,19 @@ curl -i -X POST http://localhost:8001/services/ \
   --data name=hello-backend \
   --data url=http://hello-backend:3000
 
+curl -i -X POST http://localhost:8001/services \
+  --data name=hello-backend2 \
+  --data url=http://hello-backend2:3003
+
+
 - create route on kong
 
 curl -i -X POST http://localhost:8001/services/hello-backend/routes \
   --data paths[]=/hello
+
+curl -i -X POST http://localhost:8001/services/hello-backend2/routes \
+  --data 'paths[]=/hello2'
+
 
 - Testing
 
