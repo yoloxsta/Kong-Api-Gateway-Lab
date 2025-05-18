@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kong Hello World Frontend</title>
+</head>
+<body>
+  <h1>Kong Hello World Frontend</h1>
+  <button id="helloBtn">Say Hello</button>
+  <p id="response"></p>
+
+  <script>
+    document.getElementById('helloBtn').addEventListener('click', () => {
+      fetch('http://localhost:8000/hello')
+        .then(res => res.text())
+        .then(text => {
+          document.getElementById('response').innerText = text;
+        })
+        .catch(err => {
+          document.getElementById('response').innerText = 'Error: ' + err.message;
+        });
+    });
+  </script>
+</body>
+</html>
