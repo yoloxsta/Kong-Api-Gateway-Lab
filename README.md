@@ -12,10 +12,11 @@ curl -i -X POST http://localhost:8001/services/ \
 curl -i -X POST http://localhost:8001/services/hello-backend/routes \
   --data paths[]=/hello
 
-Testing
+- Testing
 
 curl http://localhost:8000/hello
 
+- CORS Fix
 
 curl -i -X POST http://localhost:8001/routes/d867c0a4-7739-45fd-84b6-3911932f2d8c/plugins \
   --data "name=cors" \
