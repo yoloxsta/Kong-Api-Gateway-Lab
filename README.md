@@ -1,13 +1,17 @@
 ## Kong-Api-Gateway-Lab
-
+- run backend
 docker run -d --name hello-backend \
   --network kong-api-gateway-lab_kong-net \
   -p 3001:3000 \
   kong-api-gateway-lab-backend:latest
 
+- create service on kong
+
 curl -i -X POST http://localhost:8001/services/ \
   --data name=hello-backend \
   --data url=http://hello-backend:3000
+
+- create route on kong
 
 curl -i -X POST http://localhost:8001/services/hello-backend/routes \
   --data paths[]=/hello
