@@ -174,7 +174,7 @@ services:
       DB_ADAPTER: postgres
       DB_HOST: kong-database
       DB_USER: kong
-      DB_PASSWORD: kong            # ✅ Required for Konga to connect to Postgres
+      DB_PASSWORD: kong           
       DB_DATABASE: konga_db
       NODE_ENV: production
       TOKEN_SECRET: km1GUr4RkcQD7DewhJPNXrCuZwcKmqjb
