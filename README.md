@@ -7,6 +7,11 @@ docker run -d --name hello-backend \
   -p 3001:3000 \
   kong-api-gateway-lab-backend:latest
 
+docker run -d --name hello-backend2 \
+  --network kong-api-gateway-lab_kong-net \
+  -p 3003:3003 \
+  kong-api-gateway-lab-backend2:latest
+
 - create service on kong
 
 curl -i -X POST http://localhost:8001/services/ \
