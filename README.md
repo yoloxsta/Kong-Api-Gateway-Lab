@@ -53,3 +53,5 @@ curl -i -X POST http://localhost:8001/routes/d867c0a4-7739-45fd-84b6-3911932f2d8
 - https://emrah-t.medium.com/kong-api-gateway-with-microservices-part-i-how-to-install-and-config-kong-on-kubernetes-9e196621d757
 
 - https://medium.com/api-leadership/expose-backend-api-using-kong-gateway-step-by-step-guide-fcd3aeeaba73
+
+#
