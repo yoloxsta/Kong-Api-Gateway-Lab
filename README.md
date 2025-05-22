@@ -54,4 +54,32 @@ curl -i -X POST http://localhost:8001/routes/d867c0a4-7739-45fd-84b6-3911932f2d8
 
 - https://medium.com/api-leadership/expose-backend-api-using-kong-gateway-step-by-step-guide-fcd3aeeaba73
 
-#
+## Cloud Map
+
+```
+curl http://sta.sta:3000/hello
+nslookup sta.sta
+
+# Update your ECS service to enable execute command
+aws ecs update-service \
+  --cluster cm-cluster \
+  --service frontend-service-56u86q4p \
+  --enable-execute-command
+
+#Force a new deployment of your service
+aws ecs update-service \
+  --cluster cm-cluster \
+  --service frontend-service-56u86q4p \
+  --force-new-deployment
+
+aws ecs execute-command \
+  --cluster cm-cluster \
+  --task b7c4c57740b049ef862640564ab96c36 \
+  --container frontend \
+  --command "/bin/sh" \
+  --interactive
+
+
+
+
+```
