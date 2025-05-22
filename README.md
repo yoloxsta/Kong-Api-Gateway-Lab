@@ -79,7 +79,10 @@ aws ecs execute-command \
   --command "/bin/sh" \
   --interactive
 
+# you will see like as
 
-
+The Session Manager plugin was installed successfully. Use the AWS CLI to start a session.
+Starting session with SessionId: ecs-execute-command-feikbspd8tcgv99yyji2bfyx7y
+/ #
 
 ```
